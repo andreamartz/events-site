@@ -1,11 +1,20 @@
-import React from 'react';
+import Link from 'next/link';
+import EventList from '../components/events/EventList';
+// import Event from '../components/events/Event';
+import { getFeaturedEvents } from '../dummy-data.js';
+
+/* Show featured events */
 
 function HomePage() {
-  return (
-    <div>
-      <h1>This is the Home Page</h1>
-    </div>
-  )
+	// get a list of featured events
+	const featuredEvents = getFeaturedEvents();
+	const { title, image, date, location, id } = featuredEvents[0];
+
+	return (
+		<>
+			<EventList events={featuredEvents} />
+		</>
+	);
 }
 
 export default HomePage;
