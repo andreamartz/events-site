@@ -1,11 +1,12 @@
 import Event from './Event';
+import styles from './EventList.module.css';
 
 /* Renders a list of events */
 
 function EventList({ events }) {
 	return (
 		<>
-			<ul>
+			<ul className={styles.list}>
 				{events.map((event) => (
 					<Event
 						key={event.id}
