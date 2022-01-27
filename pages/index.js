@@ -8,7 +8,6 @@ import { getFeaturedEvents } from '../dummy-data.js';
 function HomePage() {
 	// get a list of featured events
 	const featuredEvents = getFeaturedEvents();
-	const { title, image, date, location, id } = featuredEvents[0];
 
 	return (
 		<>
